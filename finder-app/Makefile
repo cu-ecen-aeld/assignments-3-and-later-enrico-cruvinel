@@ -2,6 +2,10 @@ CROSS_COMPILE ?=
 CC = $(CROSS_COMPILE)gcc
 FLAGS := -Wall -Werror
 
+# all target
+.PHONY: all
+all: writer
+
 # A default target which builds the “writer” application
 writer: writer.c
 	$(CC) $(CFLAGS) writer.c -o writer
